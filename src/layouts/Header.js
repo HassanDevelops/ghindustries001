@@ -89,11 +89,8 @@ const Header = () => {
     </div>
   );
   const {
-    location: { pathname },
-    match: { path, url }
+    location: { pathname }
   } = useReactRouter();
-
-  console.log(path, url, pathname);
 
   return (
     <>

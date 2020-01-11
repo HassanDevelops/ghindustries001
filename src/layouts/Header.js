@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Drawer,
@@ -31,9 +31,10 @@ const useStyles = makeStyles(theme => ({
 
 const Header = () => {
   const classes = useStyles();
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     left: false
   });
+  const [mainTitle, setMainTitle] = useState("Home");
 
   const toggleDrawer = (side, open) => event => {
     if (
@@ -54,7 +55,13 @@ const Header = () => {
       onKeyDown={toggleDrawer(side, false)}
     >
       <MenuList>
-        <MenuItem button component={Link} to="/" selected={"/" === pathname}>
+        <MenuItem
+          button
+          component={Link}
+          to="/"
+          selected={"/" === pathname}
+          onClick={() => setMainTitle("Home")}
+        >
           Home
           <Divider />
         </MenuItem>
@@ -63,6 +70,7 @@ const Header = () => {
           component={Link}
           to="/about"
           selected={"/about" === pathname}
+          onClick={() => setMainTitle("About")}
         >
           About Us
           <Divider />
@@ -72,6 +80,7 @@ const Header = () => {
           component={Link}
           to="/products"
           selected={"/products" === pathname}
+          onClick={() => setMainTitle("Products")}
         >
           Products
           <Divider />
@@ -80,8 +89,11 @@ const Header = () => {
     </div>
   );
   const {
-    location: { pathname }
+    location: { pathname },
+    match: { path, url }
   } = useReactRouter();
+
+  console.log(path, url, pathname);
 
   return (
     <>
@@ -101,8 +113,9 @@ const Header = () => {
             >
               <MenuIcon />
             </IconButton>
+
             <Typography variant="h6" className={classes.title}>
-              Home
+              {mainTitle}
             </Typography>
           </Toolbar>
         </AppBar>

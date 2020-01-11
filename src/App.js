@@ -10,23 +10,19 @@ function App() {
     <>
       <CssBaseline />
       <Router>
-        <Switch>
-          <Route path="/" exact>
-            <Layout>
+        <Layout>
+          <Switch>
+            <Route path="/" exact>
               <Home />
-            </Layout>
-          </Route>
-          <Route path="/about" exact>
-            <Layout>
+            </Route>
+            <Route path="/about" exact>
               <About />
-            </Layout>
-          </Route>
-          <Route path="/products" exact>
-            <Layout>
+            </Route>
+            <Route path="/products" exact>
               <Products />
-            </Layout>
-          </Route>
-        </Switch>
+            </Route>
+          </Switch>
+        </Layout>
       </Router>
     </>
   );

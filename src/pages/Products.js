@@ -1,7 +1,11 @@
 import React from "react";
-
+import ProductCardHandle from "../components/ProductCardHandle";
 const Products = () => {
-  return <div>Products</div>;
+  return (
+    <div>
+      <ProductCardHandle />
+    </div>
+  );
 };
 
 export default Products;

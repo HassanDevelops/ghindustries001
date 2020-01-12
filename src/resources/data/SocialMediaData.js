@@ -64,6 +64,18 @@ const SocialMediaData = [
         children={<FacebookIcon size="32" round="true" />}
       />
     )
+  },
+  {
+    id: 3,
+    account: "whatsapp",
+    address: "https://wa.me/923354904686",
+    icon: <WhatsappIcon size="32" round="true" />,
+    share: (
+      <WhatsappShareButton
+        url="https://wa.me/923354904686"
+        children={<WhatsappIcon size="32" round="true" />}
+      />
+    )
   }
 ];
 export default SocialMediaData;

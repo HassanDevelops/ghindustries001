@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://HassanDevelops.github.io/hello1",
+  "engines": {
+    "node": "13.5.0",
+    "npm": "6.13.4"
+  },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",

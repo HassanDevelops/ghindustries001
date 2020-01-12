@@ -10,6 +10,9 @@ import {
   Button,
   Grid
 } from "@material-ui/core";
+import ProductDetailcard from "./ProductDetailcard";
+import { FacebookShareButton } from "react-share";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: { margin: "5vh auto", maxWidth: 345 },
@@ -17,7 +20,6 @@ const useStyles = makeStyles({
     height: 140
   }
 });
-
 const ProductCard = ({
   id,
   catagory,
@@ -28,6 +30,14 @@ const ProductCard = ({
   description
 }) => {
   const classes = useStyles();
+
+  const handProductDetailPage = id => {
+    return (
+      <>
+        <ProductDetailcard props={id} />
+      </>
+    );
+  };
 
   return (
     <>
@@ -42,7 +52,7 @@ const ProductCard = ({
               title="Contemplative Reptile"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography gutterBottom variant="h6" component="h2">
                 {name}
               </Typography>
               <Typography gutterBottom variant="body1" component="h3">
@@ -54,10 +64,15 @@ const ProductCard = ({
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-            <Button size="small" color="primary">
+            <FacebookShareButton
+              children="Share On Faceboook"
+              url="https://web.facebook.com/Hassan-Develops-108913493964207/"
+            />
+            <Button
+              size="small"
+              color="primary"
+              onClick={() => handProductDetailPage(id)}
+            >
               Learn More
             </Button>
           </CardActions>

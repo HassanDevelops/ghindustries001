@@ -1,7 +1,11 @@
 import React from "react";
 
 const Home = () => {
-  return <div>ediited and out of netlify folder home</div>;
+  return (
+    <>
+      <h1>Home</h1>{" "}
+    </>
+  );
 };
 
 export default Home;

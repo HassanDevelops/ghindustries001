@@ -5,7 +5,7 @@ import Products from "./pages/Products";
 import PageNotFound from "./pages/PageNotFound";
 import Layout from "./layouts/Layout";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = props => {
   return (

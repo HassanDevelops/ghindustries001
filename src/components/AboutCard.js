@@ -1,9 +1,21 @@
 import React from "react";
 import Card from "./Card";
 import AboutData from "../resources/data/AboutData";
+import { Grid } from "@material-ui/core";
 const AboutCard = () => {
   const Data = AboutData.map((data, index) => <Card key={index} {...data} />);
-  return <div>{Data}</div>;
+  return (
+    <>
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+      >
+        {Data}
+      </Grid>
+    </>
+  );
 };
 
 export default AboutCard;

@@ -11,24 +11,17 @@ const App = props => {
   return (
     <>
       <CssBaseline />
-      {console.log(props)}
-      {console.log("process : " + process.env.PUBLIC_URL)}
+      <Router basename={process.env.PUBLIC_URL}>
+        <Layout>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/products" exact component={Products} />
 
-      <Layout>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
-          <Route path="/products" exact component={Products} />
-
-          <Route
-            exact
-            path={`/about`}
-            render={routerProps => <About routerProps={routerProps} />}
-          />
-
-          <Route component={PageNotFound} />
-        </Switch>
-      </Layout>
+            <Route component={PageNotFound} />
+          </Switch>
+        </Layout>
+      </Router>
     </>
   );
 };

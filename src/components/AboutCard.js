@@ -10,7 +10,7 @@ const AboutCard = () => {
         container
         direction="row"
         justify="space-around"
-        alignItems="center"
+        alignItems="flex-start"
       >
         {Data}
       </Grid>

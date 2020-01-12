@@ -13,7 +13,7 @@ const AboutData = [
     heading: "Our Misson",
     title: '"We are the WORKFORCE and you are the CENTER of our efforts."',
     description:
-      "Our  mission is to resolve the Problems for OUR society from the profit we earn from Products. We ensure that our efforts are continuously made to improve the society and helping the humanity at all costs. We will willing donate a share of the Profit to the community welfare and do our best to help the community to grow and help provide a chance to those whom life has left behind. We work for YOUR betterment. We are looking forward to build a team of people from your own areas, to understand the problems of that area.  ",
+      "Our  mission is to resolve the Problems for OUR society from the profit we earn from Products. We ensure that our efforts are continuously made to improve the society and helping the humanity at all costs. We will willing donate a share of the Profit to the community welfare and do our best to help the community to grow and help provide a chance to those whom life has left behind. We work for YOUR betterment. ",
     source: Img002
   },
   {

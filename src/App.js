@@ -8,6 +8,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
+  const repoName = "/hello1";
   return (
     <>
       <CssBaseline />
@@ -15,14 +16,18 @@ const App = () => {
       <Router>
         <Layout>
           <Switch>
-            <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
             <Route
-              path={process.env.PUBLIC_URL + "/about"}
+              path={process.env.PUBLIC_URL + repoName + "/"}
+              exact
+              component={Home}
+            />
+            <Route
+              path={process.env.PUBLIC_URL + repoName + "/about"}
               exact
               component={About}
             />
             <Route
-              path={process.env.PUBLIC_URL + "/products"}
+              path={process.env.PUBLIC_URL + repoName + "/products"}
               exact
               component={Products}
             />

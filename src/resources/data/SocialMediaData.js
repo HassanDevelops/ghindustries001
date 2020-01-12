@@ -1,43 +1,8 @@
+import { FacebookIcon, TwitterIcon, WhatsappIcon } from "react-share";
 import {
-  EmailIcon,
-  FacebookIcon,
-  InstapaperIcon,
-  LineIcon,
-  LinkedinIcon,
-  LivejournalIcon,
-  MailruIcon,
-  OKIcon,
-  PinterestIcon,
-  PocketIcon,
-  RedditIcon,
-  TelegramIcon,
-  TumblrIcon,
-  TwitterIcon,
-  ViberIcon,
-  VKIcon,
-  WeiboIcon,
-  WhatsappIcon,
-  WorkplaceIcon
-} from "react-share";
-import {
-  EmailShareButton,
   FacebookShareButton,
-  InstapaperShareButton,
-  LineShareButton,
-  LinkedinShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
-  OKShareButton,
-  PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TumblrShareButton,
-  TwitterShareButton,
-  ViberShareButton,
-  VKShareButton,
   WhatsappShareButton,
-  WorkplaceShareButton
+  TwitterShareButton
 } from "react-share";
 import React from "react";
 const SocialMediaData = [
@@ -47,7 +12,7 @@ const SocialMediaData = [
     address: "https://twitter.com",
     icon: <TwitterIcon size="32" round="true" />,
     share: (
-      <FacebookShareButton
+      <TwitterShareButton
         url="https://twitter.com"
         children={<TwitterIcon size="32" round="true" />}
       />

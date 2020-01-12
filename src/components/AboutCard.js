@@ -29,7 +29,7 @@ const AboutCard = ({ id, heading, title, description, source }) => {
                 textTransform: "uppercase",
                 textDecoration: "underline",
                 textAlign: "center",
-                padding: "20px 0px",
+                padding: "10px 0px 20px 0px",
                 fontWeight: "bold"
               }}
               variant="h5"

@@ -10,8 +10,8 @@ import {
   Button,
   Grid
 } from "@material-ui/core";
-import ProductDetailcard from "./ProductDetailcard";
-import { FacebookShareButton } from "react-share";
+
+import ShareSocialMedia from "./ShareSocialMedia";
 
 const useStyles = makeStyles({
   card: { margin: "5vh auto", maxWidth: 345 },
@@ -30,13 +30,7 @@ const ProductCard = ({
 }) => {
   const classes = useStyles();
 
-  const handProductDetailPage = id => {
-    return (
-      <>
-        <ProductDetailcard props={id} />
-      </>
-    );
-  };
+  const handProductDetailPage = id => {};
 
   return (
     <>
@@ -63,10 +57,7 @@ const ProductCard = ({
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <FacebookShareButton
-              children="Share On Faceboook"
-              url="https://web.facebook.com/Hassan-Develops-108913493964207/"
-            />
+            <ShareSocialMedia />
             <Button
               size="small"
               color="primary"

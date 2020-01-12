@@ -10,4 +10,3 @@ const SocialMediaData = [
     address: "https://facebook.com"
   }
 ];
-export default SocialMediaData;

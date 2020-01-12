@@ -12,7 +12,6 @@ import {
 } from "@material-ui/core";
 import ProductDetailcard from "./ProductDetailcard";
 import { FacebookShareButton } from "react-share";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: { margin: "5vh auto", maxWidth: 345 },

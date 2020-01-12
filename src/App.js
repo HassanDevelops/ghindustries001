@@ -11,12 +11,21 @@ const App = () => {
   return (
     <>
       <CssBaseline />
+
       <Router>
         <Layout>
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" exact componeny={About} />
-            <Route path="/products" exact component={Products} />
+            <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
+            <Route
+              path={process.env.PUBLIC_URL + "/about"}
+              exact
+              component={About}
+            />
+            <Route
+              path={process.env.PUBLIC_URL + "/products"}
+              exact
+              component={Products}
+            />
             <Route component={PageNotFound} />
           </Switch>
         </Layout>

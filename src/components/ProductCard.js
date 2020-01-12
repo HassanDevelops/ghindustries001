@@ -39,10 +39,10 @@ const ProductCard = ({
           <CardActionArea>
             <CardMedia
               component="img"
-              alt="Contemplative Reptile"
+              alt={name}
               height="140"
               image={source}
-              title="Contemplative Reptile"
+              title={name}
             />
             <CardContent>
               <Typography gutterBottom variant="h6" component="h2">

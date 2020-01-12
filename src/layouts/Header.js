@@ -99,7 +99,7 @@ const Header = () => {
       </Drawer>
 
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="fixed">
           <Toolbar>
             <IconButton
               onClick={toggleDrawer("left", true)}

@@ -5,31 +5,30 @@ import Products from "./pages/Products";
 import PageNotFound from "./pages/PageNotFound";
 import Layout from "./layouts/Layout";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
-const App = () => {
+const App = props => {
   return (
     <>
       <CssBaseline />
+      {console.log(props)}
+      {console.log("process : " + process.env.PUBLIC_URL)}
 
-      <Router>
-        <Layout>
-          <Switch>
-            <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
-            <Route
-              path={process.env.PUBLIC_URL + "/about"}
-              exact
-              component={About}
-            />
-            <Route
-              path={process.env.PUBLIC_URL + "/products"}
-              exact
-              component={Products}
-            />
-            <Route component={PageNotFound} />
-          </Switch>
-        </Layout>
-      </Router>
+      <Layout>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/products" exact component={Products} />
+
+          <Route
+            exact
+            path={`/about`}
+            render={routerProps => <About routerProps={routerProps} />}
+          />
+
+          <Route component={PageNotFound} />
+        </Switch>
+      </Layout>
     </>
   );
 };

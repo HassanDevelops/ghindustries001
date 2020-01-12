@@ -1,9 +1,9 @@
 import React from "react";
-import AboutCard from "../components/AboutCard";
+import AboutCardHandle from "../components/AboutCardHandle";
 const About = () => {
   return (
     <div>
-      <AboutCard />
+      <AboutCardHandle />
     </div>
   );
 };

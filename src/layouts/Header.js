@@ -34,8 +34,7 @@ const Header = () => {
   const [state, setState] = useState({
     left: false
   });
-  const [mainTitle, setMainTitle] = useState("Home");
-
+  const [mainTitle, setMainTitle] = useState("Gh Industries");
   const toggleDrawer = (side, open) => event => {
     if (
       event.type === "keydown" &&

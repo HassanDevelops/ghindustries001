@@ -15,12 +15,8 @@ const Home = () => {
           description={data.description}
           source={data.source}
         />
-        ;
       </>
     );
-  } else {
-    console.log("omg");
-    return <>hi</>;
   }
 };
 

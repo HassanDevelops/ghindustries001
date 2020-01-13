@@ -8,13 +8,15 @@ const Home = () => {
   if (data.id === id) {
     return (
       <>
-        <AboutCard
-          id={data.id}
-          heading={data.heading}
-          title={data.title}
-          description={data.description}
-          source={data.source}
-        />
+        <div>
+          <AboutCard
+            id={data.id}
+            heading={data.heading}
+            title={data.title}
+            description={data.description}
+            source={data.source}
+          />
+        </div>
       </>
     );
   }

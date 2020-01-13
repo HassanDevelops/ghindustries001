@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
-  CssBaseline,
   Card,
   CardActionArea,
   CardContent,
@@ -13,17 +12,22 @@ const useStyles = makeStyles({
   card: { margin: "5vw" },
   media: {
     height: "140px"
-  }
+  },
+  fullScreenClassGrid: {
+    // display: "grid",
+    // girdTempleteColumn: "1fr auto",
+    display: "flex",
+    flexDirection: "row"
+  },
+  mobileClassGrid: {}
 });
 
 const AboutCard = ({ id, heading, title, description, source }) => {
   const classes = useStyles();
-
   return (
     <>
-      <CssBaseline />
       <Card key={id} className={classes.card}>
-        <CardActionArea>
+        <div>
           <Typography
             style={{
               textTransform: "uppercase",
@@ -36,11 +40,7 @@ const AboutCard = ({ id, heading, title, description, source }) => {
           >
             {heading}
           </Typography>
-          <CardMedia
-            className={classes.media}
-            image={source}
-            title="Contemplative Reptile"
-          />
+          <CardMedia className={classes.media} image={source} title={heading} />
           <CardContent>
             <Typography
               style={{
@@ -64,7 +64,7 @@ const AboutCard = ({ id, heading, title, description, source }) => {
               {description}
             </Typography>
           </CardContent>
-        </CardActionArea>
+        </div>
       </Card>
     </>
   );
